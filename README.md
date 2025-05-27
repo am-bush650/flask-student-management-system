@@ -4,9 +4,13 @@
 ````markdown
 # Student Management System (SMS)
 
-A custom Flask-based Student Management System designed to streamline academic management and internal communication.
+A custom Flask-based Student Management System designed to streamline
+academic management and internal communication.
 
-It supports multiple user roles (students, professors, staff), centralized student records, messaging, scheduling, assignment uploads, grade management, and exporting student data.
+
+It supports multiple user roles (students, professors, staff),
+centralized student records, messaging, scheduling, 
+assignment uploads, grade management, and exporting student data.
 
 ---
 
@@ -56,7 +60,8 @@ It supports multiple user roles (students, professors, staff), centralized stude
 
 ## Usage
 
-1. Ensure the `templates` folder contains all required HTML template files (`login.html`, `student_record.html`, etc.).
+1. Ensure the `templates` folder contains all required 
+   HTML template files (`login.html`, `student_record.html`, etc.).
 
 2. Run the Flask application:
 
