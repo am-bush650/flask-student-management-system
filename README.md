@@ -1,5 +1,6 @@
-```
+
 # Student Management System (SMS)
+```
 
 A custom Flask-based Student Management System designed to streamline
 academic management and internal communication.
@@ -9,7 +10,7 @@ centralized student records, messaging, scheduling,
 assignment uploads, grade management, and exporting student data.
 ```
 
-```
+
 ## Features
 
 - Centralized storage of student records, academic files, and grades
@@ -21,8 +22,8 @@ assignment uploads, grade management, and exporting student data.
 - Bulk CSV upload of grades
 - Notifications and reminders for events (basic support)
 - Secure login with Flask-Login
-```
-```
+
+
 ## Requirements
 
 - Python 3.8+
@@ -30,8 +31,8 @@ assignment uploads, grade management, and exporting student data.
 - Flask-Login
 - Flask-SQLAlchemy
 - ReportLab (for PDF export)
-```
-```
+
+
 ## Installation
 
 1. Clone the repository or download the project files.
@@ -44,8 +45,8 @@ assignment uploads, grade management, and exporting student data.
 3. Install dependencies:
 
    pip install flask flask-login flask_sqlalchemy reportlab
-```
-```
+
+
 ## Usage
 
 1. Ensure the `templates` folder contains all required
@@ -62,7 +63,7 @@ assignment uploads, grade management, and exporting student data.
    - Student: `student1` / `pass`
    - Professor: `prof1` / `pass`
    - Staff: `staff1` / `pass`
-```
+
 
 ## Project Structure
 
