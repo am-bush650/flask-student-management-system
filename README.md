@@ -1,11 +1,15 @@
 # Student Management System (SMS)
 
+
 A custom Flask-based Student Management System designed to streamline
 academic management and internal communication.
 
+
 It supports multiple user roles (students, professors, staff),
-centralized student records, messaging, scheduling,
+centralized student records, messaging, scheduling, 
 assignment uploads, grade management, and exporting student data.
+
+
 
 ## Features
 
@@ -19,6 +23,8 @@ assignment uploads, grade management, and exporting student data.
 - Notifications and reminders for events (basic support)
 - Secure login with Flask-Login
 
+
+
 ## Requirements
 
 - Python 3.8+
@@ -27,6 +33,8 @@ assignment uploads, grade management, and exporting student data.
 - Flask-SQLAlchemy
 - ReportLab (for PDF export)
 
+
+
 ## Installation
 
 1. Clone the repository or download the project files.
@@ -34,15 +42,18 @@ assignment uploads, grade management, and exporting student data.
 2. Create and activate a virtual environment (optional but recommended):
 
    python -m venv venv
-   source venv/bin/activate # On Windows: venv\Scripts\activate
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+
 
 3. Install dependencies:
 
    pip install flask flask-login flask_sqlalchemy reportlab
+   
+
 
 ## Usage
 
-1. Ensure the `templates` folder contains all required
+1. Ensure the `templates` folder contains all required 
    HTML template files (`login.html`, `student_record.html`, etc.).
 
 2. Run the Flask application:
@@ -57,22 +68,27 @@ assignment uploads, grade management, and exporting student data.
    - Professor: `prof1` / `pass`
    - Staff: `staff1` / `pass`
 
+
+
 ## Project Structure
+
 
 your-project-folder/
 ├── app.py
 ├── templates/
-│ ├── login.html
-│ ├── student_record.html
-│ ├── students.html
-│ ├── edit_grades.html
-│ ├── upload_grades.html
-│ ├── upload_assignment.html
-│ ├── assignment_list.html
-│ └── calendar.html
-├── static/ # (optional) for CSS, JS, images
+│   ├── login.html
+│   ├── student_record.html
+│   ├── students.html
+│   ├── edit_grades.html
+│   ├── upload_grades.html
+│   ├── upload_assignment.html
+│   ├── assignment_list.html
+│   └── calendar.html
+├── static/         # (optional) for CSS, JS, images
 ├── README.md
 └── requirements.txt (optional)
+
+
 
 ## Extending the Project
 
@@ -80,3 +96,5 @@ your-project-folder/
 - Implement real-time notifications (e.g., with WebSockets)
 - Add more granular permissions and auditing
 - Integrate external APIs for email or SMS notifications
+
+
