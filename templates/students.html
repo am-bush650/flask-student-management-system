@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<title>Students</title>
+<h2>Students</h2>
+<form method="GET">
+	<input name="search" placeholder="Search by username" value="{{ search }}" />
+	<button type="submit">Search</button>
+</form>
+<table border="1" cellpadding="5">
+	<tr>
+		<th>Username</th>
+		<th>Actions</th>
+	</tr>
+	{% for s in students %}
+	<tr>
+		<td>{{ s.username }}</td>
+		<td><a href="{{ url_for('student_record', id=s.id) }}">View</a></td>
+	</tr>
+	{% endfor %}
+</table>
+<a href="{{ url_for('logout') }}">Logout</a>
+<!DOCTYPE html>
+<!-- Declares the document type as HTML5 -->
+
+<title>Students</title>
+<!-- Sets the title of the webpage to "Students" -->
+
+<h2>Students</h2>
+<!-- Main heading of the page -->
+
+<form method="GET">
+	<!-- Search form that sends data via GET method to filter students -->
+
+	<input name="search" placeholder="Search by username" value="{{ search }}" />
+	<!-- Input field for entering a search query to filter students by username
+       The value is prefilled with the current search term, if any -->
+
+	<button type="submit">Search</button>
+	<!-- Button to submit the search form -->
+</form>
+
+<table border="1" cellpadding="5">
+	<!-- Table with borders and padding for better readability -->
+
+	<tr>
+		<th>Username</th>
+		<th>Actions</th>
+	</tr>
+	<!-- Table header with two columns: Username and Actions -->
+
+	{% for s in students %}
+	<!-- Loop through each student object passed from the backend -->
+
+	<tr>
+		<td>{{ s.username }}</td>
+		<!-- Display the student's username -->
+
+		<td><a href="{{ url_for('student_record', id=s.id) }}">View</a></td>
+		<!-- Link to view detailed student record; uses the student's ID in the URL -->
+	</tr>
+
+	{% endfor %}
+	<!-- End of students loop -->
+</table>
+
+<a href="{{ url_for('logout') }}">Logout</a>
+<!-- Link to log out of the application -->

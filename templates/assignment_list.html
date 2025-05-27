@@ -1,0 +1,27 @@
+<!doctype html>
+<!-- Document type declaration for HTML5 -->
+
+<title>Assignments</title>
+<!-- Sets the page title shown in browser tab -->
+
+<h2>All Assignments</h2>
+<!-- Heading for the page -->
+
+<ul>
+  <!-- Loop through the 'assignments' list passed from Flask -->
+  {% for a in assignments %}
+    <li>
+      <!-- Display assignment filename -->
+      {{ a.filename }} 
+      - 
+      <!-- Link to download the assignment by calling 'download_assignment' route with assignment ID -->
+      <a href="{{ url_for('download_assignment', id=a.id) }}">Download</a>
+    </li>
+  {% else %}
+    <!-- If the 'assignments' list is empty, show this message -->
+    <li>No assignments uploaded</li>
+  {% endfor %}
+</ul>
+
+<!-- Link to go back to the student list or dashboard -->
+<a href="{{ url_for('student_view') }}">Back</a>

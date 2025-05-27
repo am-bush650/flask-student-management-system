@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Declares the document type as HTML5 -->
+
+<title>Login</title>
+<!-- Sets the page title shown in the browser tab -->
+
+<h2>Login</h2>
+<!-- Page heading indicating this is the login page -->
+
+<form method="POST">
+	<!-- Form for submitting login credentials via POST -->
+
+	<input name="username" placeholder="Username" required />
+	<!-- Input field for username with placeholder text and 'required' attribute to enforce input -->
+
+	<input name="password" placeholder="Password" type="password" required />
+	<!-- Password input field that masks entered characters, also required -->
+
+	<button type="submit">Login</button>
+	<!-- Submit button to send the form data to the server -->
+</form>
+
+<!-- Display any flash messages (like errors or notifications) -->
+{% with messages = get_flashed_messages() %} {% if messages %}
+<ul>
+	<!-- Loop over all flash messages and display each inside a list item -->
+	{% for m in messages %}
+	<li>{{ m }}</li>
+	{% endfor %}
+</ul>
+{% endif %} {% endwith %}

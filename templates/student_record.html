@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Declares this is an HTML5 document -->
+
+<title>Student Record</title>
+<!-- Sets the title of the page -->
+
+<h2>Student Record: {{ student.username }}</h2>
+<!-- Displays the heading showing which student's record is being viewed -->
+
+<h3>Grades:</h3>
+<!-- Section heading for grades -->
+
+<pre>{{ record.grades }}</pre>
+<!-- Displays the grades in a preformatted text block preserving whitespace -->
+
+<h3>Assignments:</h3>
+<!-- Section heading for assignments -->
+
+<ul>
+	{% for a in assignments %}
+	<!-- Loop through each assignment associated with the student -->
+	<li>{{ a.filename }}</li>
+	<!-- Display the assignment file name in a list item -->
+	{% else %}
+	<!-- If there are no assignments, show this message -->
+	<li>No assignments uploaded</li>
+	{% endfor %}
+</ul>
+
+{% if current_user.role == 'student' and current_user.id == student.id %}
+<!-- Conditional: Only show upload link if the logged-in user is a student and viewing their own record -->
+<a href="{{ url_for('upload_assignment') }}">Upload Assignment</a>
+<!-- Link to upload a new assignment -->
+{% endif %}
+
+<br />
+<!-- Line break for spacing -->
+
+<!-- Links to export the student record in PDF or CSV format -->
+<a href="{{ url_for('export_pdf', id=student.id) }}">Export PDF</a> |
+<a href="{{ url_for('export_csv', id=student.id) }}">Export CSV</a> |
+
+<!-- Link to return to the main student view -->
+<a href="{{ url_for('student_view') }}">Back</a>

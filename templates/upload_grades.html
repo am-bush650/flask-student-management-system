@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- Declares the document type as HTML5 -->
+
+<title>Upload Grades CSV</title>
+<!-- Sets the webpage title displayed in the browser tab -->
+
+<h2>Upload Grades CSV</h2>
+<!-- Page heading indicating this page is for uploading CSV files with grades -->
+
+<form method="POST" enctype="multipart/form-data">
+	<!-- Form for uploading files
+       - method="POST": sends data to the server for processing
+       - enctype="multipart/form-data": required for file uploads -->
+
+	<input type="file" name="csv_file" accept=".csv" required />
+	<!-- File input allowing user to select a CSV file
+       - 'name' attribute identifies this input for server-side processing
+       - 'accept=".csv"' restricts file picker to show only CSV files
+       - 'required' ensures the user cannot submit the form without selecting a file -->
+
+	<button type="submit">Upload</button>
+	<!-- Submit button to send the selected file to the server -->
+</form>
+
+<a href="{{ url_for('student_view') }}">Back</a>
+<!-- Link to navigate back to the student list/view page -->

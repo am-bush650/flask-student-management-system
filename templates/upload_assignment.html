@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- Declares the document type as HTML5 -->
+
+<title>Upload Assignment</title>
+<!-- Sets the title of the webpage -->
+
+<h2>Upload Assignment</h2>
+<!-- Page heading -->
+
+<form method="POST" enctype="multipart/form-data">
+	<!-- Form for uploading a file
+       method="POST" because files are sent as data to the server
+       enctype="multipart/form-data" is necessary for file uploads -->
+
+	<input type="file" name="assignment" required />
+	<!-- File input allowing user to select a file to upload
+       'name' attribute identifies this file input in form submission
+       'required' means user must select a file before submitting -->
+
+	<button type="submit">Upload</button>
+	<!-- Submit button to send the form data to the server -->
+</form>
+
+<a href="{{ url_for('student_record', id=current_user.id) }}">Back</a>
+<!-- Link to go back to the current logged-in student's record page -->

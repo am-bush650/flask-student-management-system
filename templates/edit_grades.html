@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<title>Edit Grades</title>
+<h2>Edit Grades</h2>
+<form method="POST">
+	<!DOCTYPE html>
+	<!-- Declares the document type as HTML5 -->
+
+	<title>Edit Grades</title>
+	<!-- Sets the page title shown in the browser tab -->
+
+	<h2>Edit Grades</h2>
+	<!-- Page heading indicating this page allows editing grades -->
+
+	<form method="POST">
+		<!-- Form for submitting grade edits, using POST method to send data securely -->
+
+		<select name="student_id">
+			<!-- Dropdown menu to select which student’s grades to edit -->
+			{% for s in students %}
+			<!-- Loop over the list of students passed from Flask -->
+			<option value="{{ s.id }}">{{ s.username }}</option>
+			<!-- Each option represents a student, with value as their ID and displayed text as username -->
+			{% endfor %}
+		</select>
+		<br /><br />
+		<textarea
+			name="grades"
+			rows="5"
+			cols="40"
+			placeholder="Enter grades"
+		></textarea>
+		<!-- Text area input for entering or editing grades for the selected student -->
+		<br />
+		<button type="submit">Save</button>
+		<!-- Submit button to send the form data to the server -->
+	</form>
+
+	<!-- Link to navigate back to the student listing page -->
+	<a href="{{ url_for('student_view') }}">Back</a>
+
+	<select name="student_id">
+		{% for s in students %}
+		<option value="{{ s.id }}">{{ s.username }}</option>
+		{% endfor %}</select
+	><br /><br />
+	<textarea
+		name="grades"
+		rows="5"
+		cols="40"
+		placeholder="Enter grades"
+	></textarea
+	><br />
+	<button type="submit">Save</button>
+</form>
+<a href="{{ url_for('student_view') }}">Back</a>
