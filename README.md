@@ -1,13 +1,12 @@
 # flask-student-management-system
 
-student management sysyem
-
-Sure! Here’s a clear and concise README.md file for your Student Management System Flask app:
 
 ````markdown
 # Student Management System (SMS)
 
-A custom Flask-based Student Management System designed to streamline academic management and internal communication. It supports multiple user roles (students, professors, staff), centralized student records, messaging, scheduling, assignment uploads, grade management, and exporting student data.
+A custom Flask-based Student Management System designed to streamline academic management and internal communication.
+
+It supports multiple user roles (students, professors, staff), centralized student records, messaging, scheduling, assignment uploads, grade management, and exporting student data.
 
 ---
 
@@ -18,7 +17,6 @@ A custom Flask-based Student Management System designed to streamline academic m
 - Messaging system between students, professors, and staff
 - Flexible scheduling and calendar integration (basic placeholder)
 - File uploads for assignments
-- Web interface styled with Bootstrap (or Tailwind)
 - Export student records as PDF and CSV
 - Bulk CSV upload of grades
 - Notifications and reminders for events (basic support)
@@ -100,7 +98,6 @@ your-project-folder/
 ## Extending the Project
 
 - Add full calendar and reminder functionality
-- Improve UI/UX with Bootstrap or Tailwind CSS
 - Implement real-time notifications (e.g., with WebSockets)
 - Add more granular permissions and auditing
 - Integrate external APIs for email or SMS notifications
